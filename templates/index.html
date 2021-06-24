@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pairings</title>
+</head>
+<body>
+    <form method="post">
+        <h3>Scoring table:</h3>
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="text" name="EnemyP1" value="{{d['EnemyP1']}}"></td>
+                <td><input type="text" name="EnemyP2" value="{{d['EnemyP2']}}"></td>
+                <td><input type="text" name="EnemyP3" value="{{d['EnemyP3']}}"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="OurP1" value="{{d['OurP1']}}"></td>
+                <td><input type="number" name="OP1_EP1" value="{{d['OP1_EP1']}}"></td>
+                <td><input type="number" name="OP1_EP2" value="{{d['OP1_EP2']}}"></td>
+                <td><input type="number" name="OP1_EP3" value="{{d['OP1_EP3']}}"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="OurP2" value="{{d['OurP2']}}"></td>
+                <td><input type="number" name="OP2_EP1" value="{{d['OP2_EP1']}}"></td>
+                <td><input type="number" name="OP2_EP2" value="{{d['OP2_EP2']}}"></td>
+                <td><input type="number" name="OP2_EP3" value="{{d['OP2_EP3']}}"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="OurP3" value="{{d['OurP3']}}"></td>
+                <td><input type="number" name="OP3_EP1" value="{{d['OP3_EP1']}}"></td>
+                <td><input type="number" name="OP3_EP2" value="{{d['OP3_EP2']}}"></td>
+                <td><input type="number" name="OP3_EP3" value="{{d['OP3_EP3']}}"></td>
+            </tr>
+        </table>
+
+    <p>
+        <input type="submit" name="action" value="Calculate step1">
+	</p>
+    <br><br>
+    <table>
+        <tr><td>Our defender's name</td><td>Enemy's defender's name:</td></tr>
+        <tr>
+            <td><input type="text" name="OD" value="{{d['OD']}}"></td>
+            <td><input type="text" name="ED" value="{{d['ED']}}"></td>
+        </tr>
+    </table>
+
+
+    <p>
+        <input type="submit" name="action" value="Calculate step2">
+    </p>
+    </form>
+
+<p>
+    <h3>Result:</h3>
+    {% autoescape false %}
+    {{d['result']}}
+    {% endautoescape %}
+</p>
+
+</body>
+</html>
